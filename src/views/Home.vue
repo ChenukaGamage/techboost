@@ -7,10 +7,11 @@
     <a href="/quiz" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
+
  </template>
- 
  <script>
  export default {
    name: 'Home',
  };
  </script>
+

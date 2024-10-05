@@ -1,5 +1,10 @@
 <script setup>
 import { ref, computed } from 'vue'
+import {
+   BIconBatteryFull,
+   BIconArrow90degDown,
+   BIconAlarm,
+} from "bootstrap-icons-vue";
 
 const questions = ref([
    {
@@ -39,8 +44,8 @@ const currentQuestion = ref(0)
 const score = computed(() => {
    let value = 0
    questions.value.map(q => {
-		if (q.selected != null && q.answer == q.selected) {
-			console.log('correct');
+      if (q.selected != null && q.answer == q.selected) {
+         console.log('correct');
          value += 2
       }
    })
@@ -54,8 +59,8 @@ const getCurrentQuestion = computed(() => {
 })
 
 const SetAnswer = (evt) => {
-   questions.value[currentQuestion.value].selected = e.target.value
-	e.target.value = null
+   questions.value[currentQuestion.value].selected = evt.target.value
+   evt.target.value = null
 }
 
 const nextQuestion = () => {
@@ -63,8 +68,16 @@ const nextQuestion = () => {
       currentQuestion.value++
       return
    }
-      quizCompleted.value = true
+   quizCompleted.value = true
+}
+
+const previousQuestion = () => {
+   if (currentQuestion.value > 0) {
+      currentQuestion.value--
+      return
    }
+   quizCompleted.value = true
+}
 </script>
 
 <template>
@@ -79,20 +92,20 @@ const nextQuestion = () => {
 
       <div class="options">
          <label
-         v-for="(option, index) in getCurrentQuestion.options"
-                   :for="'option' + index"
-                   :class="`option ${
-                      getCurrentQuestion.selected == index
-                      ? index == getCurrentQuestion.answer
-                         ? 'correct'
-                         : 'wrong'
-                      : ''
-                   } ${
-                      getCurrentQuestion.selected != null &&
-                      index != getCurrentQuestion.selected
-                      ? 'disabled'
-                      : ''
-                   }`">
+            v-for="(option, index) in getCurrentQuestion.options"
+            :for="'option' + index"
+            :class="`option ${
+               getCurrentQuestion.selected == index
+                  ? index == getCurrentQuestion.answer
+                     ? 'correct'
+                     : 'wrong'
+                  : ''
+            } ${
+               getCurrentQuestion.selected != null &&
+               index != getCurrentQuestion.selected
+                  ? 'disabled'
+                  : ''
+            }`">
             <input 
                type="radio" 
                :id="'option' + index"
@@ -101,21 +114,26 @@ const nextQuestion = () => {
                v-model="getCurrentQuestion.selected"
                :disabled="getCurrentQuestion.selected"
                @change="SetAnswer"
-               />
+            />
             <span>{{ option }}</span>
          </label>
       </div>
-      <button 
-         @click="nextQuestion"
-         :disabled="getCurrentQuestion.selected === null">
-         {{ 
-            getCurrentQuestion.index == questions.length - 1
-            ? 'Finish'
-            : getCurrentQuestion.selected == null
-               ? 'Select an answer'
-               : 'Next Question'
-         }}
-      </button>
+      <div class="container">
+         <button 
+            type="button" 
+            class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
+            @click="previousQuestion"
+            :disabled="getCurrentQuestion.selected <= 0">
+            <i class="bi bi-arrow-left"></i>
+         </button>      
+         <button 
+            type="button" 
+            class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
+            @click="nextQuestion"
+            :disabled="getCurrentQuestion.selected === null">
+            <i class="bi bi-arrow-right"></i>
+         </button>      
+      </div>
    </section>
    <section v-else>
       <h1> Quiz Completed !</h1>
@@ -204,23 +222,10 @@ h1 {
    display: none;
 }
 
-button {
-   appearance: none;
-   border: none;
-   outline: none;
-   cursor: pointer;
-
-   padding: 0.5rem 1rem;
-   background-color: #2cce7d;
-   color: #2d2d2d;
-   font-weight: 700;
-   text-transform: uppercase;
-   font-size: 1.25rem;
-   border-radius: 0.5rem;
-}
-
-button:disabled {
-   opacity: 0.5;
+.container {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 1rem;
 }
 
 h2 {

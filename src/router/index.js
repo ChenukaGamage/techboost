@@ -1,28 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
-import About from '../views/About.vue';
+import Home from '../views/Home.vue'; // Adjust the paths according to your project structure
 import Quiz from '../views/Quiz.vue';
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About,
-  },
-  {
-   path: '/quiz',
-   name: 'Quiz',
-   component: Quiz,
-},
+  { path: '/', component: Home },
+  { path: '/Quiz', component: Quiz },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 

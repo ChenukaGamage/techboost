@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/quiz">Quiz</router-link>
-    <router-view />
+    <Navbar />
+    <router-view /> <!-- This is where your page components will be rendered -->
   </div>
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue';
+
 export default {
   name: 'App',
+  components:{
+    Navbar,
+  },
 };
 </script>

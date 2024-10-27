@@ -10,11 +10,13 @@
         <!-- Courses Grid -->
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col" v-for="course in courses" :key="course.id">
-            <div class="card bg-secondary text-white shadow-sm rounded">
-              <div class="card-body">
-                <h5 class="card-title">{{ course.name }}</h5>
+            <router-link :to="{ name: 'ChapterList', params: { classId: course.id } }" class="text-decoration-none">
+              <div class="card bg-secondary text-white shadow-sm rounded">
+                <div class="card-body">
+                  <h5 class="card-title">{{ course.name }}</h5>
+                </div>
               </div>
-            </div>
+            </router-link>
           </div>
         </div>
       </div>
@@ -76,7 +78,11 @@ h1 {
 /* Course Title Styles */
 .course-title {
   font-size: 2.5rem;
-  color: #000000;
+  color: #ffffff; /* Changed to white for visibility against background */
   margin-bottom: 20px; /* Ensures clear space between title and course grid */
+}
+
+.text-decoration-none {
+  text-decoration: none; /* Removes underline from router-link */
 }
 </style>

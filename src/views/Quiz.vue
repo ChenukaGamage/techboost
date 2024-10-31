@@ -1,148 +1,135 @@
-<script setup>
-import { ref, computed } from 'vue'
-import {
-   BIconBatteryFull,
-   BIconArrow90degDown,
-   BIconAlarm,
-} from "bootstrap-icons-vue";
-
-const questions = ref([
-   {
-      question: 'What is Vue?',
-      answer: 0,
-      options: [
-         'A framework',
-         'A library',
-         'A type of hat'
-      ],
-      selected: null
-   },
-   {
-      question: 'What is Vuex used for?',
-      answer: 2,
-      options: [
-         'Eating a delicious snack',
-         'Viewing things',
-         'State management'
-      ],
-      selected: null
-   },
-   {
-      question: 'What is Vue Router?',
-      answer: 1,
-      options: [
-         'An ice cream maker',
-         'A routing library for Vue',
-         'Burger sauce'
-      ],
-      selected: null
-   }
-])
-
-const quizCompleted = ref(false)
-const currentQuestion = ref(0)
-const score = computed(() => {
-   let value = 0
-   questions.value.map(q => {
-      if (q.selected != null && q.answer == q.selected) {
-         console.log('correct');
-         value += 2
-      }
-   })
-   return value
-})
-
-const getCurrentQuestion = computed(() => {
-   let question = questions.value[currentQuestion.value]
-   question.index = currentQuestion.value
-   return question
-})
-
-const SetAnswer = (evt) => {
-   questions.value[currentQuestion.value].selected = evt.target.value
-   evt.target.value = null
-}
-
-const nextQuestion = () => {
-   if (currentQuestion.value < questions.value.length - 1) {
-      currentQuestion.value++
-      return
-   }
-   quizCompleted.value = true
-}
-
-const previousQuestion = () => {
-   if (currentQuestion.value > 0) {
-      currentQuestion.value--
-      return
-   }
-   quizCompleted.value = true
-}
-</script>
-
 <template>
-<main class="app">
-   <h1>Quiz</h1>
-
-   <section class="quiz" v-if="!quizCompleted">
+  <main class="app">
+    <h1>Quiz</h1>
+    <section v-if="!quizCompleted" class="quiz">
       <div class="quiz-info">
-         <span class="question">{{ getCurrentQuestion.question }}</span>
-         <span class="score">Score {{ score }}/{{ questions.length * 2 }}</span>
-      </div>
-
-      <div class="options">
-         <label
-            v-for="(option, index) in getCurrentQuestion.options"
-            :for="'option' + index"
-            :class="`option ${
-               getCurrentQuestion.selected == index
-                  ? index == getCurrentQuestion.answer
-                     ? 'correct'
-                     : 'wrong'
-                  : ''
-            } ${
-               getCurrentQuestion.selected != null &&
-               index != getCurrentQuestion.selected
-                  ? 'disabled'
-                  : ''
-            }`">
-            <input 
-               type="radio" 
-               :id="'option' + index"
-               :name="getCurrentQuestion.index" 
-               :value="index"
-               v-model="getCurrentQuestion.selected"
-               :disabled="getCurrentQuestion.selected"
-               @change="SetAnswer"
-            />
-            <span>{{ option }}</span>
-         </label>
+        <span class="question">{{ currentQuestionIndex + 1 }}. {{ getCurrentQuestion.question }}</span>
+        <span class="score">Score: {{ score }}/{{ questions.length * 2 }}</span>
       </div>
       <div class="container">
-         <button 
-            type="button" 
-            class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
-            @click="previousQuestion"
-            :disabled="getCurrentQuestion.selected <= 0">
-            <i class="bi bi-arrow-left"></i>
-         </button>      
-         <button 
-            type="button" 
-            class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
-            @click="nextQuestion"
-            :disabled="getCurrentQuestion.selected === null">
-            <i class="bi bi-arrow-right"></i>
-         </button>      
+        <button
+          type="button"
+          class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
+          @click="previousQuestion"
+          :disabled="currentQuestion.value <= 0"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
+          @click="nextQuestion"
+          :disabled="getCurrentQuestion.selected === null"
+        >
+          <i class="bi bi-arrow-right"></i>
+        </button>
       </div>
-   </section>
-   <section v-else>
-      <h1> Quiz Completed !</h1>
-      <p> Your Score is {{ score }}/{{ questions.length * 2 }}</p>
-   </section>
-</main>
+      <div class="options">
+        <label
+          v-for="(option, index) in getCurrentQuestion.options"
+          :key="index"
+          :for="'option' + index"
+          :class="getOptionClass(index)"
+        >
+          <input
+            type="radio"
+            :id="'option' + index"
+            :name="getCurrentQuestion.index"
+            :value="index"
+            v-model="getCurrentQuestion.selected"
+            :disabled="getCurrentQuestion.selected !== null"
+            @input="SetAnswer"
+          />
+          <span>{{ option }}</span>
+        </label>
+      </div>
+    </section>
+    <section v-else>
+      <h1>Quiz Completed!</h1>
+      <p>Your Score is {{ score }}/{{ questions.length * 2 }}</p>
+      <!-- Insert button here to return to home -->
+    </section>
+  </main>
 </template>
 
-<style>
+<script>
+import { ref, computed, watch } from "vue";
+import { useRoute } from "vue-router"; // Import useRoute for accessing route parameters
+import { quizData } from "./questions.js"; // Import the quiz data module
+
+export default {
+  setup() {
+    // this.$route.params.quizId
+    const route = useRoute(); // Get the route object
+    const quizId = computed(() => route.params.quizId); // Dynamically compute quizId from route params
+    const questions = ref([]); // Initialize an empty questions array
+    const quizCompleted = ref(false);
+    const currentQuestion = ref(0);
+
+    watch(
+      quizId,
+      (newQuizId) => {
+        questions.value = quizData[newQuizId]?.questions || [];
+        quizCompleted.value = false; // Reset quiz completion status
+        currentQuestion.value = 0; // Reset to the first question
+      },
+      { immediate: true }
+    );
+    
+    const currentQuestionIndex = computed(() => currentQuestion.value);
+
+    const score = computed(() =>
+      questions.value.reduce((total, q) => (q.selected === q.answer ? total + 2 : total), 0)
+    );
+
+    const getCurrentQuestion = computed(() => questions.value[currentQuestion.value] || {});
+
+    const SetAnswer = (evt) => {
+      questions.value[currentQuestion.value].selected = parseInt(evt.target.value);
+    };
+
+    const nextQuestion = () => {
+      if (currentQuestion.value < questions.value.length - 1) {
+        currentQuestion.value++;
+      } else {
+        quizCompleted.value = true;
+      }
+    };
+
+    const previousQuestion = () => {
+      if (currentQuestion.value > 0) {
+        currentQuestion.value--;
+      }
+    };
+
+    const getOptionClass = (index) => {
+      const question = getCurrentQuestion.value;
+      return `option ${
+        question.selected === index
+          ? index === question.answer
+            ? "correct"
+            : "wrong"
+          : ""
+      } ${question.selected != null && index !== question.selected ? "disabled" : ""}`;
+    };
+
+    return {
+      questions,
+      quizCompleted,
+      currentQuestion,
+      score,
+      getCurrentQuestion,
+      SetAnswer,
+      nextQuestion,
+      previousQuestion,
+      getOptionClass,
+      currentQuestionIndex, 
+    };
+  },
+};
+</script>
+
+<style scoped>
 * {
    margin: 0;
    padding: 0;
@@ -168,7 +155,7 @@ h1 {
 }
 
 .quiz {
-   background-color: #382a4b;
+   background-color: #5f6162;
    padding: 1rem;
    width: 100%;
    max-width: 640px;
@@ -226,6 +213,7 @@ h1 {
    display: flex;
    justify-content: space-between;
    margin-top: 1rem;
+   margin-bottom: 1rem;
 }
 
 h2 {
@@ -236,6 +224,7 @@ h2 {
 p {
    font-size: 1.25rem;
    text-align: center;
-   color: #2d2d2d;
+   color: #ffffff;
 }
+
 </style>

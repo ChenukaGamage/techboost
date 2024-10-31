@@ -1,143 +1,153 @@
-<script setup>
-import { ref, computed } from 'vue'
-
-const questions = ref([
-   {
-      question: 'What is Vue?',
-      answer: 0,
-      options: [
-         'A framework',
-         'A library',
-         'A type of hat'
-      ],
-      selected: null
-   },
-   {
-      question: 'What is Vuex used for?',
-      answer: 2,
-      options: [
-         'Eating a delicious snack',
-         'Viewing things',
-         'State management'
-      ],
-      selected: null
-   },
-   {
-      question: 'What is Vue Router?',
-      answer: 1,
-      options: [
-         'An ice cream maker',
-         'A routing library for Vue',
-         'Burger sauce'
-      ],
-      selected: null
-   }
-])
-
-const quizCompleted = ref(false)
-const currentQuestion = ref(0)
-const score = computed(() => {
-   let value = 0
-   questions.value.map(q => {
-      if (q.selected != null && q.answer == q.selected) {
-         console.log('correct');
-         value += 2
-      }
-   })
-   return value
-})
-
-const getCurrentQuestion = computed(() => {
-   let question = questions.value[currentQuestion.value]
-   question.index = currentQuestion.value
-   return question
-})
-
-const SetAnswer = (evt) => {
-   questions.value[currentQuestion.value].selected = evt.target.value
-   evt.target.value = null
-}
-
-const nextQuestion = () => {
-   if (currentQuestion.value < questions.value.length - 1) {
-      currentQuestion.value++
-      return
-   }
-   quizCompleted.value = true
-}
-
-const previousQuestion = () => {
-   if (currentQuestion.value > 0) {
-      currentQuestion.value--
-      return
-   }
-   quizCompleted.value = true
-}
-</script>
-
 <template>
-<main class="app">
-   <h1>Quiz</h1>
-
-   <section class="quiz" v-if="!quizCompleted">
+  <main class="app">
+    <h1>Quiz</h1>
+    <section v-if="!quizCompleted" class="quiz">
       <div class="quiz-info">
-         <span class="question">{{ getCurrentQuestion.question }}</span>
-         <span class="score">Score {{ score }}/{{ questions.length * 2 }}</span>
-      </div>
-
-      <div class="options">
-         <label
-            v-for="(option, index) in getCurrentQuestion.options"
-            :for="'option' + index"
-            :class="`option ${
-               getCurrentQuestion.selected == index
-                  ? index == getCurrentQuestion.answer
-                     ? 'correct'
-                     : 'wrong'
-                  : ''
-            } ${
-               getCurrentQuestion.selected != null &&
-               index != getCurrentQuestion.selected
-                  ? 'disabled'
-                  : ''
-            }`">
-            <input 
-               type="radio" 
-               :id="'option' + index"
-               :name="getCurrentQuestion.index" 
-               :value="index"
-               v-model="getCurrentQuestion.selected"
-               :disabled="getCurrentQuestion.selected"
-               @change="SetAnswer"
-            />
-            <span>{{ option }}</span>
-         </label>
+        <span class="question">{{ getCurrentQuestion.question }}</span>
+        <span class="score">Score: {{ score }}/{{ questions.length * 2 }}</span>
       </div>
       <div class="container">
-         <button 
-            type="button" 
-            class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
-            @click="previousQuestion"
-            :disabled="getCurrentQuestion.selected <= 0">
-            <i class="bi bi-arrow-left"></i>
-         </button>      
-         <button 
-            type="button" 
-            class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
-            @click="nextQuestion"
-            :disabled="getCurrentQuestion.selected === null">
-            <i class="bi bi-arrow-right"></i>
-         </button>      
+        <button
+          type="button"
+          class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
+          @click="previousQuestion"
+          :disabled="currentQuestion.value <= 0"
+        >
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-info p-3 rounded-circle btn-sm opacity-85"
+          @click="nextQuestion"
+          :disabled="getCurrentQuestion.selected === null"
+        >
+          <i class="bi bi-arrow-right"></i>
+        </button>
       </div>
-   </section>
-   <section v-else>
-      <h1> Quiz Completed !</h1>
-      <p> Your Score is {{ score }}/{{ questions.length * 2 }}</p>
-   </section>
-</main>
+      <div class="options">
+        <label
+          v-for="(option, index) in getCurrentQuestion.options"
+          :key="index"
+          :for="'option' + index"
+          :class="getOptionClass(index)"
+        >
+          <input
+            type="radio"
+            :id="'option' + index"
+            :name="getCurrentQuestion.index"
+            :value="index"
+            v-model="getCurrentQuestion.selected"
+            :disabled="getCurrentQuestion.selected !== null"
+            @input="SetAnswer"
+          />
+          <span>{{ option }}</span>
+        </label>
+      </div>
+    </section>
+    <section v-else>
+      <h1>Quiz Completed!</h1>
+      <p>Your Score is {{ score }}/{{ questions.length * 2 }}</p>
+    </section>
+  </main>
 </template>
 
-<style>
+<script>
+import { ref, computed } from "vue";
+
+// Mock quiz data with correct answers
+const quizData = {
+  1: {
+    questions: [
+      {
+        question: "What is Vue.js?",
+        options: ["A library", "A framework", "A database", "A CSS tool"],
+        answer: 1, // Correct answer is "A framework"
+        selected: null,
+      },
+      {
+        question: "Who created Vue.js?",
+        options: ["Evan You", "Jordan Walke", "Brendan Eich", "Guido van Rossum"],
+        answer: 0, // Correct answer is "Evan You"
+        selected: null,
+      },
+    ],
+  },
+  2: {
+    questions: [
+      {
+        question: "What is the virtual DOM?",
+        options: ["A UI representation", "A backend concept", "An actual DOM", "A CSS method"],
+        answer: 0, // Correct answer is "A UI representation"
+        selected: null,
+      },
+      {
+        question: "Which lifecycle hook is called after mounting?",
+        options: ["created", "mounted", "destroyed", "updated"],
+        answer: 1, // Correct answer is "mounted"
+        selected: null,
+      },
+    ],
+  },
+};
+
+export default {
+  setup() {
+    // Assume quiz ID is 1 for this example, replace with dynamic route param if needed
+    const questions = ref(quizData[1].questions);
+    const quizCompleted = ref(false);
+    const currentQuestion = ref(0);
+
+    const score = computed(() =>
+      questions.value.reduce((total, q) => (q.selected === q.answer ? total + 2 : total), 0)
+    );
+
+    const getCurrentQuestion = computed(() => questions.value[currentQuestion.value] || {});
+
+    const SetAnswer = (evt) => {
+      questions.value[currentQuestion.value].selected = parseInt(evt.target.value);
+    };
+
+    const nextQuestion = () => {
+      if (currentQuestion.value < questions.value.length - 1) {
+        currentQuestion.value++;
+      } else {
+        quizCompleted.value = true;
+      }
+    };
+
+    const previousQuestion = () => {
+      if (currentQuestion.value > 0) {
+        currentQuestion.value--;
+      }
+    };
+
+    const getOptionClass = (index) => {
+      const question = getCurrentQuestion.value;
+      return `option ${
+        question.selected === index
+          ? index === question.answer
+            ? "correct"
+            : "wrong"
+          : ""
+      } ${question.selected != null && index !== question.selected ? "disabled" : ""}`;
+    };
+
+    return {
+      questions,
+      quizCompleted,
+      currentQuestion,
+      score,
+      getCurrentQuestion,
+      SetAnswer,
+      nextQuestion,
+      previousQuestion,
+      getOptionClass,
+    };
+  },
+};
+</script>
+
+<style scoped>
 * {
    margin: 0;
    padding: 0;
@@ -163,7 +173,7 @@ h1 {
 }
 
 .quiz {
-   background-color: #382a4b;
+   background-color: #5f6162;
    padding: 1rem;
    width: 100%;
    max-width: 640px;
@@ -221,6 +231,7 @@ h1 {
    display: flex;
    justify-content: space-between;
    margin-top: 1rem;
+   margin-bottom: 1rem;
 }
 
 h2 {
@@ -233,4 +244,5 @@ p {
    text-align: center;
    color: #2d2d2d;
 }
+
 </style>

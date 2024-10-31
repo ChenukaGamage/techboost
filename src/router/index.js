@@ -1,28 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
-import About from '../views/About.vue';
 import Quiz from '../views/Quiz.vue';
+import ChapterList from '../views/ChapterList.vue'; // Import the ChapterList view
 
 const routes = [
+  { path: '/', component: Home },
   {
-    path: '/',
-    name: 'Home',
-    component: Home,
+    path: '/class/:classId', // Dynamic route for classes with classId parameter
+    name: 'ChapterList',
+    component: ChapterList
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About,
-  },
-  {
-   path: '/quiz',
-   name: 'Quiz',
-   component: Quiz,
-},
+    path: '/quiz/:quizId', // Dynamic route for quizzes with quizId parameter
+    name: 'Quiz',
+    component: Quiz
+  }
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 

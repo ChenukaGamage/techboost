@@ -85,4 +85,9 @@ h1 {
 .text-decoration-none {
   text-decoration: none; /* Removes underline from router-link */
 }
+
+.card-title {
+  font-size: 1.5rem; /* Slightly larger font size for course names */
+}
+
 </style>

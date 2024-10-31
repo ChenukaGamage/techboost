@@ -3,7 +3,7 @@
     <h1>Quiz</h1>
     <section v-if="!quizCompleted" class="quiz">
       <div class="quiz-info">
-        <span class="question">{{ getCurrentQuestion.question }}</span>
+        <span class="question">{{ currentQuestionIndex + 1 }}. {{ getCurrentQuestion.question }}</span>
         <span class="score">Score: {{ score }}/{{ questions.length * 2 }}</span>
       </div>
       <div class="container">
@@ -47,55 +47,36 @@
     <section v-else>
       <h1>Quiz Completed!</h1>
       <p>Your Score is {{ score }}/{{ questions.length * 2 }}</p>
+      <!-- Insert button here to return to home -->
     </section>
   </main>
 </template>
 
 <script>
-import { ref, computed } from "vue";
-
-// Mock quiz data with correct answers
-const quizData = {
-  1: {
-    questions: [
-      {
-        question: "What is Vue.js?",
-        options: ["A library", "A framework", "A database", "A CSS tool"],
-        answer: 1, // Correct answer is "A framework"
-        selected: null,
-      },
-      {
-        question: "Who created Vue.js?",
-        options: ["Evan You", "Jordan Walke", "Brendan Eich", "Guido van Rossum"],
-        answer: 0, // Correct answer is "Evan You"
-        selected: null,
-      },
-    ],
-  },
-  2: {
-    questions: [
-      {
-        question: "What is the virtual DOM?",
-        options: ["A UI representation", "A backend concept", "An actual DOM", "A CSS method"],
-        answer: 0, // Correct answer is "A UI representation"
-        selected: null,
-      },
-      {
-        question: "Which lifecycle hook is called after mounting?",
-        options: ["created", "mounted", "destroyed", "updated"],
-        answer: 1, // Correct answer is "mounted"
-        selected: null,
-      },
-    ],
-  },
-};
+import { ref, computed, watch } from "vue";
+import { useRoute } from "vue-router"; // Import useRoute for accessing route parameters
+import { quizData } from "./questions.js"; // Import the quiz data module
 
 export default {
   setup() {
-    // Assume quiz ID is 1 for this example, replace with dynamic route param if needed
-    const questions = ref(quizData[1].questions);
+    // this.$route.params.quizId
+    const route = useRoute(); // Get the route object
+    const quizId = computed(() => route.params.quizId); // Dynamically compute quizId from route params
+    const questions = ref([]); // Initialize an empty questions array
     const quizCompleted = ref(false);
     const currentQuestion = ref(0);
+
+    watch(
+      quizId,
+      (newQuizId) => {
+        questions.value = quizData[newQuizId]?.questions || [];
+        quizCompleted.value = false; // Reset quiz completion status
+        currentQuestion.value = 0; // Reset to the first question
+      },
+      { immediate: true }
+    );
+    
+    const currentQuestionIndex = computed(() => currentQuestion.value);
 
     const score = computed(() =>
       questions.value.reduce((total, q) => (q.selected === q.answer ? total + 2 : total), 0)
@@ -142,6 +123,7 @@ export default {
       nextQuestion,
       previousQuestion,
       getOptionClass,
+      currentQuestionIndex, 
     };
   },
 };
@@ -242,7 +224,7 @@ h2 {
 p {
    font-size: 1.25rem;
    text-align: center;
-   color: #2d2d2d;
+   color: #ffffff;
 }
 
 </style>

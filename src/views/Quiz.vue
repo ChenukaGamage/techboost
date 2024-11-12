@@ -48,6 +48,9 @@
       <h1>Quiz Completed!</h1>
       <p>Your Score is {{ score }}/{{ questions.length * 2 }}</p>
       <!-- Insert button here to return to home -->
+        <button @click="goToHomePage" class="finish-button">
+          Return to Home
+        </button>
     </section>
   </main>
 </template>
@@ -88,6 +91,10 @@ export default {
       questions.value[currentQuestion.value].selected = parseInt(evt.target.value);
     };
 
+    const goToHomePage = () => {
+      router.push({ name: "Home" });
+    };
+
     const nextQuestion = () => {
       if (currentQuestion.value < questions.value.length - 1) {
         currentQuestion.value++;
@@ -123,7 +130,8 @@ export default {
       nextQuestion,
       previousQuestion,
       getOptionClass,
-      currentQuestionIndex, 
+      currentQuestionIndex,
+      goToHomePage
     };
   },
 };

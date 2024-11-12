@@ -25,24 +25,21 @@
 </template>
 
 <script>
+// Import the classesData array
+import { classesData } from '../data';
 export default {
   name: "Home",
   data() {
     return {
-      courses: [
-        { id: 1, name: "Course 1" },
-        { id: 2, name: "Course 2" },
-        { id: 3, name: "Course 3" },
-        { id: 4, name: "Course 4" },
-        { id: 5, name: "Course 5" },
-        { id: 6, name: "Course 6" },
-      ],
+      // Set courses to the imported classesData
+      courses: classesData,
     };
   },
 };
 </script>
 
 <style scoped>
+/* Your CSS remains the same */
 body {
   background-color: blue; /* Change the background color to blue */
   margin: 0; /* Remove default margin */
@@ -75,7 +72,6 @@ h1 {
   height: 150px; /* Make cards square-shaped */
 }
 
-/* Course Title Styles */
 .course-title {
   font-size: 2.5rem;
   color: #ffffff; /* Changed to white for visibility against background */
@@ -88,6 +84,6 @@ h1 {
 
 .card-title {
   font-size: 1.5rem; /* Slightly larger font size for course names */
+  text-align: center; /* Center align course names */
 }
-
 </style>

@@ -2,7 +2,7 @@
 export const classesData = [
     {
       id: 1,
-      name: "Course 1",
+      name: "COMP 1013 Programming 1 Python",
       chapters: [
         { name: "Chapter 1", quizId: 1 },
         { name: "Chapter 2", quizId: 2 }
@@ -10,7 +10,7 @@ export const classesData = [
     },
     {
       id: 2,
-      name: "Course 2",
+      name: "COMP 1023 Programming 2 ",
       chapters: [
         { name: "Chapter 1", quizId: 3 },
         { name: "Chapter 2", quizId: 4 }
@@ -18,7 +18,7 @@ export const classesData = [
     },
     {
       id: 3,
-      name: "Course 3",
+      name: "Computer Architecture 1",
       chapters: [
         { name: "Chapter 1", quizId: 5 },
         { name: "Chapter 2", quizId: 6 }

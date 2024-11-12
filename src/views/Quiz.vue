@@ -48,9 +48,13 @@
       <h1>Quiz Completed!</h1>
       <p>Your Score is {{ score }}/{{ questions.length * 2 }}</p>
       <!-- Insert button here to return to home -->
-        <button @click="goToHomePage" class="finish-button">
-          Return to Home
-        </button>
+      <div class="d-flex justify-content-center align-items-center vh-100">
+      <router-link to="/" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+        Return to Home
+      </router-link>
+      </div> 
+
+
     </section>
   </main>
 </template>
@@ -92,7 +96,7 @@ export default {
     };
 
     const goToHomePage = () => {
-      router.push({ name: "Home" });
+     this.route.push( {name: ChapterList} );
     };
 
     const nextQuestion = () => {

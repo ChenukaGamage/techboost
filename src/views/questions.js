@@ -260,7 +260,7 @@ export const quizData = {
       }
     ]
   },
-  4: {
+  5: {
     questions: [
       {
         question: "Which logic gate outputs 1 only when both inputs are different?",
@@ -308,7 +308,7 @@ export const quizData = {
       }
     ]
   },
-  5: {
+  6: {
     questions: [
       {
         question: "In a full adder, what is the output carry when A=1, B=1, and Cin=1?",

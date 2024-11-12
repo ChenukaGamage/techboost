@@ -4,7 +4,10 @@ import Quiz from '../views/Quiz.vue';
 import ChapterList from '../views/ChapterList.vue';
 
 const routes = [
-  { path: '/', name: 'Home', component: Home }, // Added name attribute
+  { path: '/', 
+    name: 'Home', 
+    component: Home 
+  },
   {
     path: '/class/:classId', 
     name: 'ChapterList',

@@ -72,6 +72,10 @@ h1 {
   height: 150px; /* Make cards square-shaped */
 }
 
+.card:hover {
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
 .course-title {
   font-size: 2.5rem;
   color: #ffffff; /* Changed to white for visibility against background */

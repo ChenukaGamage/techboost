@@ -204,6 +204,7 @@ h1 {
 }
 .option:hover {
    background-color: #1e2b78;
+   transform: scale(1.05)
 }
 .option.correct {
    background-color: #0a0;
@@ -226,6 +227,18 @@ h1 {
    justify-content: space-between;
    margin-top: 1rem;
    margin-bottom: 1rem;
+}
+
+/* .container button {
+   background-color: #1f41b1;
+   border: none;
+   color: #000;
+   font-size: 1.5rem;
+   cursor: pointer;
+} */
+
+.container button:hover {
+  transform: scale(1.09)
 }
 
 h2 {

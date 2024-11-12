@@ -26,7 +26,7 @@ export const classesData = [
     },
     {
       id: 4,
-      name: "Course 4",
+      name: "Full Stack Development",
       chapters: [
         { name: "Chapter 1", quizId: 7 },
         { name: "Chapter 2", quizId: 8 }
@@ -34,15 +34,15 @@ export const classesData = [
     },
     {
       id: 5,
-      name: "Course 5",
+      name: "Artificial Intelligence 1",
       chapters: [
-        { name: "Chapter 1", quizId: 9 },
-        { name: "Chapter 2", quizId: 10 }
+        { name: "Module 1", quizId: 9 },
+        { name: "Module 2", quizId: 10 }
       ]
     },
     {
       id: 6,
-      name: "Course 6",
+      name: "Human Computer Interaction",
       chapters: [
         { name: "Chapter 1", quizId: 11 },
         { name: "Chapter 2", quizId: 12 }

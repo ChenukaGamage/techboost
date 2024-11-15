@@ -95,10 +95,6 @@ export default {
       questions.value[currentQuestion.value].selected = parseInt(evt.target.value);
     };
 
-    const goToHomePage = () => {
-     this.route.push( {name: ChapterList} );
-    };
-
     const nextQuestion = () => {
       if (currentQuestion.value < questions.value.length - 1) {
         currentQuestion.value++;
@@ -134,8 +130,7 @@ export default {
       nextQuestion,
       previousQuestion,
       getOptionClass,
-      currentQuestionIndex,
-      goToHomePage
+      currentQuestionIndex
     };
   },
 };

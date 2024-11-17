@@ -20,7 +20,7 @@
             <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/quiz/1">Quiz</a>
+            <a class="nav-link" href="/quizlist">Quiz</a>
           </li>
         </ul>
       </div>

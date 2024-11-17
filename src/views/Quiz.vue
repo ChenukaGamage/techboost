@@ -50,9 +50,9 @@
       <p class="percentageScore" >You Scored {{ (score/questions.length)*100 }}/{{ 100 }}</p>
       <!-- Insert button here to return to home -->
       <div class="d-flex justify-content-center align-items-center vh-100">
-      <router-link to="/" class="btn btn-primary btn-lg rounded-pill shadow-sm">
-        Return to Home
-      </router-link>
+      <a href="/" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+      Return to Home
+      </a>
       </div> 
 
 

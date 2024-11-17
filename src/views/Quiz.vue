@@ -4,7 +4,7 @@
     <section v-if="!quizCompleted" class="quiz">
       <div class="quiz-info">
         <span class="question">{{ currentQuestionIndex + 1 }}. {{ getCurrentQuestion.question }}</span>
-        <span class="score">Score: {{ score }}/{{ questions.length * 2 }}</span>
+        <span class="score">Score: {{ score }}/{{ questions.length }}</span>
       </div>
       <div class="container">
         <button
@@ -46,7 +46,8 @@
     </section>
     <section v-else>
       <h1>Quiz Completed!</h1>
-      <p>Your Score is {{ score }}/{{ questions.length * 2 }}</p>
+      <p>Your Score is {{ score }}/{{ questions.length }}</p>
+      <p class="percentageScore" >You Scored {{ (score/questions.length)*100 }}/{{ 100 }}</p>
       <!-- Insert button here to return to home -->
       <div class="d-flex justify-content-center align-items-center vh-100">
       <router-link to="/" class="btn btn-primary btn-lg rounded-pill shadow-sm">
@@ -86,7 +87,7 @@ export default {
     const currentQuestionIndex = computed(() => currentQuestion.value);
 
     const score = computed(() =>
-      questions.value.reduce((total, q) => (q.selected === q.answer ? total + 2 : total), 0)
+      questions.value.reduce((total, q) => (q.selected === q.answer ? total + 1 : total), 0)
     );
 
     const getCurrentQuestion = computed(() => questions.value[currentQuestion.value] || {});
@@ -250,6 +251,12 @@ p {
    font-size: 1.25rem;
    text-align: center;
    color: #ffffff;
+}
+
+.percentageScore{
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
 }
 
 </style>

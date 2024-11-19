@@ -64,6 +64,7 @@
 import { ref, computed, watch } from "vue";
 import { useRoute } from "vue-router"; // Import useRoute for accessing route parameters
 import { quizData } from "./questions.js"; // Import the quiz data module
+import { shuffleArray } from "../utilities/shuffleArray.js";
 
 export default {
   setup() {
@@ -73,6 +74,8 @@ export default {
     const questions = ref([]); // Initialize an empty questions array
     const quizCompleted = ref(false);
     const currentQuestion = ref(0);
+    const NUM_QUESTIONS = 5; // Change this value to the desired number of questions
+
 
     watch(
       quizId,

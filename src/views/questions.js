@@ -74,7 +74,57 @@ export const quizData = {
         options: ["*", "**", "//", "%"],
         answer: 1,  // Correct answer is "**"
         selected: null
-      }
+      },
+      {
+        question: "What is the correct way to declare a variable in Python?",
+        options: ["let x = 5;", "var x = 5;", "x = 5", "int x = 5;"],
+        answer: 2,
+      },
+      {
+        question: "Which function is used to get user input in Python?",
+        options: ["scanf()", "cin", "input()", "read()"],
+        answer: 2,
+      },
+      {
+        question: "How do you write a single-line comment in Python?",
+        options: ["// comment", "# comment", "/* comment */", "<!-- comment -->"],
+        answer: 1,
+      },
+      {
+        question: "What is the output of: print('Hello' + 'World')?",
+        options: ["Hello World", "Hello+World", "HelloWorld", "Error"],
+        answer: 2,
+      },
+      {
+        question: "What keyword is used to define a function in Python?",
+        options: ["function", "def", "define", "func"],
+        answer: 1,
+      },
+      {
+        question: "What data type does the function len() return?",
+        options: ["float", "int", "str", "list"],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is not a Python data type?",
+        options: ["list", "tuple", "map", "dictionary"],
+        answer: 2,
+      },
+      {
+        question: "What is the output of: print(3 * 'abc')?",
+        options: ["abcabcabc", "abc*3", "abc", "Error"],
+        answer: 0,
+      },
+      {
+        question: "How do you create a new line in a string?",
+        options: ["\\n", "\\t", "\\r", "\\s"],
+        answer: 0,
+      },
+      {
+        question: "What is the data type of: type(4.0)?",
+        options: ["int", "float", "complex", "double"],
+        answer: 1,
+      },
      ]
    },
    2: {
@@ -161,7 +211,107 @@ export const quizData = {
         ],
         answer: 0,  // Correct answer is "except"
         selected: null
-      }
+      },
+       {
+      question: "What does the 'elif' keyword do in Python?",
+      options: [
+        "Defines another condition in an if statement",
+        "Loops through a block of code",
+        "Terminates a loop",
+        "Creates a variable",
+      ],
+      answer: 0,
+    },
+    {
+      question: "Which of the following is the correct syntax for an 'if' statement in Python?",
+      options: [
+        "if condition { ... }",
+        "if condition then { ... }",
+        "if condition: ...",
+        "if condition { ... } else { ... }",
+      ],
+      answer: 2,
+    },
+    {
+      question: "What is the output of the following code? print(3 == 3)",
+      options: [
+        "True",
+        "False",
+        "Error",
+        "3",
+      ],
+      answer: 0,
+    },
+    {
+      question: "What does the 'not' operator do in Python?",
+      options: [
+        "Negates the condition",
+        "Returns the logical negation of the value",
+        "Inverts the value of the boolean",
+        "None of the above",
+      ],
+      answer: 1,
+    },
+    {
+      question: "How do you combine multiple conditions in an 'if' statement in Python?",
+      options: [
+        "Using the 'combine' keyword",
+        "Using 'or' and 'and' operators",
+        "Using the 'mix' operator",
+        "Multiple 'if' statements in sequence",
+      ],
+      answer: 1,
+    },
+    {
+      question: "Which of the following will be evaluated as False in Python?",
+      options: [
+        "if 0:",
+        "if ''",
+        "if None",
+        "if 1:",
+      ],
+      answer: 3,
+    },
+    {
+      question: "Which Python keyword is used to stop the execution of a loop?",
+      options: [
+        "stop",
+        "break",
+        "exit",
+        "halt",
+      ],
+      answer: 1,
+    },
+    {
+      question: "What is the result of the following Python expression: 5 > 2 and 3 < 7?",
+      options: [
+        "True",
+        "False",
+        "Error",
+        "None",
+      ],
+      answer: 0,
+    },
+    {
+      question: "What is the output of the following code? print(1 < 2 < 3)",
+      options: [
+        "True",
+        "False",
+        "Error",
+        "None",
+      ],
+      answer: 0,
+    },
+    {
+      question: "What is the correct way to write a conditional expression (ternary operator) in Python?",
+      options: [
+        "condition ? true_value : false_value",
+        "if condition: true_value else false_value",
+        "condition ? (true_value, false_value)",
+        "None of the above",
+      ],
+      answer: 1,
+    },
      ]
    },
    3: {
@@ -209,7 +359,107 @@ export const quizData = {
         ],
         answer: 0,  // Correct answer is "32"
         selected: null
-      }
+      },
+      {
+        question: "Which of the following is the correct syntax for declaring a variable in Java?",
+        options: [
+          "int x;",
+          "x int;",
+          "int x = 0;",
+          "0 int x;",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is the default value of a boolean variable in Java?",
+        options: [
+          "false",
+          "true",
+          "null",
+          "0",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which method is the entry point for any Java application?",
+        options: [
+          "start()",
+          "main()",
+          "run()",
+          "init()",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following data types is not a primitive type in Java?",
+        options: [
+          "int",
+          "char",
+          "String",
+          "double",
+        ],
+        answer: 2,
+      },
+      {
+        question: "Which keyword is used to define a constant in Java?",
+        options: [
+          "final",
+          "constant",
+          "static",
+          "immutable",
+        ],
+        answer: 0,
+      },
+      {
+        question: "What will the following code output? `System.out.println(5 + 3 * 2);`",
+        options: [
+          "16",
+          "11",
+          "13",
+          "23",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is a valid Java identifier?",
+        options: [
+          "1variable",
+          "variable_1",
+          "variable-1",
+          "variable@1",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is the correct syntax to create a new object of a class in Java?",
+        options: [
+          "ClassName object = new ClassName();",
+          "ClassName object = ClassName();",
+          "new ClassName object = ClassName();",
+          "ClassName object = new object();",
+        ],
+        answer: 0,
+      },
+      {
+        question: "What is the purpose of the `public static void main(String[] args)` method in Java?",
+        options: [
+          "It is the method where execution starts in a Java program",
+          "It declares a class in Java",
+          "It initializes variables",
+          "It compiles the Java code",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is the correct syntax for a single-line comment in Java?",
+        options: [
+          "/* comment */",
+          "// comment",
+          "// comment */",
+          "<-- comment -->",
+        ],
+        answer: 1,
+      },
     ]
   },
   4: {
@@ -257,7 +507,107 @@ export const quizData = {
         ],
         answer: 1,  // Correct answer is "protected"
         selected: null
-      }
+      },
+      {
+        question: "Which of the following loops will execute the code block at least once, even if the condition is false?",
+        options: [
+          "for loop",
+          "while loop",
+          "do-while loop",
+          "for-each loop",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What will the following code print? `for(int i = 0; i < 5; i++) { System.out.print(i + \" \"); }`",
+        options: [
+          "0 1 2 3 4",
+          "0 1 2 3 4 5",
+          "1 2 3 4 5",
+          "5 4 3 2 1",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following methods can be used to find the length of an array in Java?",
+        options: [
+          "array.size()",
+          "array.length()",
+          "array.length",
+          "array.getLength()",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is the result of the following expression? `int[] arr = {1, 2, 3}; arr[2] = 4;`",
+        options: [
+          "ArrayIndexOutOfBoundsException",
+          "1, 2, 4",
+          "1, 2, 3",
+          "4, 2, 3",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the correct syntax to declare an array of 10 integers in Java?",
+        options: [
+          "int[] arr = new int[10];",
+          "int arr[] = new int[10];",
+          "int[] arr = int[10];",
+          "int arr[10];",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is used to handle exceptions in Java?",
+        options: [
+          "try-catch block",
+          "throw-catch block",
+          "exception-catch block",
+          "catch-throw block",
+        ],
+        answer: 0,
+      },
+      {
+        question: "What will the following code print? `try { int x = 10 / 0; } catch (ArithmeticException e) { System.out.println(\"Error\"); }`",
+        options: [
+          "Error",
+          "10",
+          "ArithmeticException",
+          "Nothing",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is NOT a valid type of exception in Java?",
+        options: [
+          "NullPointerException",
+          "IOException",
+          "DivideByZeroException",
+          "ArithmeticException",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is the output of the following code? `int[] arr = {1, 2, 3, 4}; System.out.println(arr[5]);`",
+        options: [
+          "4",
+          "ArrayIndexOutOfBoundsException",
+          "1",
+          "null",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following statements is correct for catching multiple exceptions in Java?",
+        options: [
+          "catch(Exception1 | Exception2)",
+          "catch(Exception1, Exception2)",
+          "catch(Exception1 and Exception2)",
+          "catch(Exception1, Exception2, Exception3)",
+        ],
+        answer: 0,
+      },
     ]
   },
   5: {
@@ -305,7 +655,207 @@ export const quizData = {
         ],
         answer: 2,  // Correct answer is "Both Sum of Products and Product of Sums"
         selected: null
-      }
+      },
+      {
+        question: "What is the primary function of the CPU?",
+        options: [
+          "Store data",
+          "Perform calculations and execute instructions",
+          "Control the input and output devices",
+          "Control the power supply",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the purpose of the ALU in the CPU?",
+        options: [
+          "To execute logical and arithmetic operations",
+          "To fetch instructions from memory",
+          "To store data temporarily",
+          "To manage memory",
+        ],
+        answer: 0,
+      },
+      {
+        question: "What does the control unit in a CPU do?",
+        options: [
+          "Performs calculations",
+          "Manages the flow of data between components",
+          "Stores data in memory",
+          "Controls the input and output devices",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which component is responsible for transferring data between the CPU and memory?",
+        options: [
+          "Control Unit",
+          "ALU",
+          "Memory Unit",
+          "Data Bus",
+        ],
+        answer: 3,
+      },
+      {
+        question: "What is the difference between RAM and ROM?",
+        options: [
+          "RAM is read-only, and ROM is read-write",
+          "RAM is volatile, while ROM is non-volatile",
+          "RAM is used for long-term storage, while ROM is used for temporary storage",
+          "ROM is faster than RAM",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the purpose of the clock in a CPU?",
+        options: [
+          "It manages the flow of electricity",
+          "It synchronizes the operations of the CPU",
+          "It stores data temporarily",
+          "It generates power for the CPU",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is an example of secondary memory?",
+        options: [
+          "RAM",
+          "Cache",
+          "Hard Disk Drive (HDD)",
+          "Registers",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What does the term 'clock cycle' refer to in a CPU?",
+        options: [
+          "The time it takes to execute an instruction",
+          "The time it takes for the CPU to reset",
+          "The time between two instructions being fetched",
+          "The speed at which data is transferred",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is not a type of processor architecture?",
+        options: [
+          "Von Neumann",
+          "Harvard",
+          "RISC",
+          "SRAM",
+        ],
+        answer: 3,
+      },
+      {
+        question: "What is pipelining in CPU architecture?",
+        options: [
+          "Executing multiple instructions simultaneously",
+          "Breaking down instructions into stages",
+          "Performing a single instruction in multiple stages",
+          "None of the above",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the primary function of the ALU (Arithmetic Logic Unit) in a computer system?",
+        options: [
+          "Data storage",
+          "Performing arithmetic and logical operations",
+          "Handling input and output",
+          "Controlling data flow",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is NOT part of the central processing unit (CPU)?",
+        options: [
+          "Control Unit",
+          "Arithmetic Logic Unit",
+          "Cache memory",
+          "Hard drive",
+        ],
+        answer: 3,
+      },
+      {
+        question: "What does the control unit (CU) do in a CPU?",
+        options: [
+          "It performs arithmetic and logical operations",
+          "It manages data storage",
+          "It fetches, decodes, and executes instructions",
+          "It provides power to the CPU",
+        ],
+        answer: 2,
+      },
+      {
+        question: "In a Von Neumann architecture, which of the following components stores both data and instructions?",
+        options: [
+          "Registers",
+          "Cache",
+          "Memory",
+          "CPU",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is the function of the bus in a computer system?",
+        options: [
+          "It stores data temporarily",
+          "It connects components and transfers data",
+          "It processes data",
+          "It manages input and output operations",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following best describes a register in the context of computer architecture?",
+        options: [
+          "A permanent storage device",
+          "A temporary, high-speed storage area inside the CPU",
+          "A type of RAM",
+          "A secondary storage device",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the purpose of the fetch-decode-execute cycle in a CPU?",
+        options: [
+          "To execute the operating system instructions",
+          "To run user applications",
+          "To execute instructions in a program step by step",
+          "To store data in memory",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What type of memory is directly accessible by the CPU and stores instructions and data?",
+        options: [
+          "Cache memory",
+          "Primary memory (RAM)",
+          "Secondary storage (Hard drive)",
+          "Optical storage (CD)",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following best describes the term 'clock cycle' in computer architecture?",
+        options: [
+          "The time it takes for the CPU to process a command",
+          "The number of operations the CPU can perform in a given time period",
+          "The speed at which the memory operates",
+          "The frequency at which the CPU fetches instructions from memory",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is NOT a type of processor register?",
+        options: [
+          "Program Counter",
+          "Accumulator",
+          "Cache",
+          "Instruction Register",
+        ],
+        answer: 2,
+      },
     ]
   },
   6: {
@@ -353,7 +903,107 @@ export const quizData = {
         ],
         answer: 0,  // Correct answer is "NOT(AND)"
         selected: null
-      }
+      },
+      {
+        question: "What is the primary function of cache memory in a computer system?",
+        options: [
+          "To store the operating system permanently",
+          "To speed up data access by storing frequently used data",
+          "To store data that is no longer in use",
+          "To handle input and output operations",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following best describes the difference between RAM (Random Access Memory) and ROM (Read-Only Memory)?",
+        options: [
+          "RAM is non-volatile, while ROM is volatile",
+          "RAM is used to store data permanently, while ROM stores data temporarily",
+          "RAM is volatile, and data is lost when power is turned off, while ROM is non-volatile",
+          "Both RAM and ROM are volatile",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is the purpose of virtual memory in computer systems?",
+        options: [
+          "To increase the physical memory of the CPU",
+          "To extend the amount of usable memory beyond physical RAM by using hard drive space",
+          "To manage the execution of instructions",
+          "To prevent memory leaks from occurring",
+        ],
+        answer: 1,
+      },
+      {
+        question: "In a computer system, what is the main function of the system bus?",
+        options: [
+          "It manages memory allocation",
+          "It controls the input and output devices",
+          "It transfers data between the CPU, memory, and other components",
+          "It stores data and instructions temporarily",
+        ],
+        answer: 2,
+      },
+      {
+        question: "Which of the following is a characteristic of a CISC (Complex Instruction Set Computer) architecture?",
+        options: [
+          "It uses fewer, simpler instructions",
+          "It uses a large number of complex instructions that can perform multiple tasks in a single instruction",
+          "It relies heavily on pipelining",
+          "It has a reduced set of instructions for faster execution",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What does the term 'pipelining' refer to in CPU architecture?",
+        options: [
+          "It allows the CPU to execute instructions in parallel",
+          "It stores instructions in multiple stages to improve execution speed",
+          "It handles data transfer between registers",
+          "It limits the number of instructions the CPU can process at once",
+        ],
+        answer: 2,
+      },
+      {
+        question: "Which of the following best defines 'data hazards' in a pipelined architecture?",
+        options: [
+          "A situation where data is lost due to poor memory management",
+          "A situation where instructions are delayed due to dependencies on previous instructions' data",
+          "A situation where data is fetched from the wrong memory address",
+          "A situation where multiple instructions execute at the same time",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What does the term 'superscalar architecture' refer to in CPU design?",
+        options: [
+          "A CPU design that allows multiple instructions to be executed simultaneously",
+          "A design where a CPU can only execute one instruction at a time",
+          "A CPU design that uses simpler, scalar instructions",
+          "A type of memory architecture",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following best describes a 'Harvard Architecture'?",
+        options: [
+          "A computer architecture that uses a single memory for both data and instructions",
+          "A computer architecture that uses separate memory storage for data and instructions",
+          "A computer architecture that doesn't use a CPU",
+          "A computer architecture that uses a single processor for all tasks",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is a primary benefit of using cache memory in a system?",
+        options: [
+          "It allows for faster data processing by storing recently accessed data closer to the CPU",
+          "It can store data permanently, even after power is lost",
+          "It can run applications faster than the primary memory",
+          "It acts as a backup in case the main memory fails",
+        ],
+        answer: 0,
+      },
     ]
   },
   7: {
@@ -396,7 +1046,107 @@ export const quizData = {
         ],
         answer: 1,  // Correct answer is "margin: 0 auto;"
         selected: null
-      }
+      },
+      {
+        question: "What is the primary role of a front-end developer in full stack development?",
+        options: [
+          "To manage the server-side logic and databases",
+          "To create the visual elements and user interface of a web application",
+          "To implement security protocols and authentication",
+          "To maintain the backend infrastructure",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is a commonly used front-end framework for building interactive user interfaces?",
+        options: [
+          "Node.js",
+          "React",
+          "Express",
+          "MongoDB",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is an essential component of a full stack development environment?",
+        options: [
+          "HTML for front-end development",
+          "JavaScript for server-side programming",
+          "CSS for database management",
+          "SQL for building user interfaces",
+        ],
+        answer: 0,
+      },
+      {
+        question: "In the context of full stack development, what does the term 'stack' refer to?",
+        options: [
+          "The programming languages used in the project",
+          "The collection of technologies used to build both the front-end and back-end of a web application",
+          "The database management system",
+          "The cloud platform used for deployment",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the main purpose of using a back-end framework like Express.js in full stack development?",
+        options: [
+          "To create user interfaces for the web page",
+          "To manage the database and data flow between the client and server",
+          "To style the application",
+          "To handle asynchronous operations on the client-side",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following programming languages is primarily used for back-end development in full stack applications?",
+        options: [
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "PHP",
+        ],
+        answer: 3,
+      },
+      {
+        question: "Which of the following is the function of CSS in full stack development?",
+        options: [
+          "To provide dynamic behavior and interactivity",
+          "To style the content and layout of web pages",
+          "To manage server requests and responses",
+          "To store and retrieve data from the database",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What does 'responsive design' mean in the context of front-end web development?",
+        options: [
+          "The design adapts to different screen sizes and devices",
+          "The design includes interactive elements that respond to user input",
+          "The design makes the application load faster",
+          "The design ensures data is fetched quickly from the server",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is a common database used in full stack development?",
+        options: [
+          "MySQL",
+          "React.js",
+          "Bootstrap",
+          "Sass",
+        ],
+        answer: 0,
+      },
+      {
+        question: "In a full stack application, what is the primary function of an API?",
+        options: [
+          "To store data in a database",
+          "To allow the front-end to communicate with the back-end and exchange data",
+          "To design the user interface",
+          "To ensure secure authentication for users",
+        ],
+        answer: 1,
+      },
     ]
   },
   8: {
@@ -434,7 +1184,107 @@ export const quizData = {
         options: ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
         answer: 2,  // Correct answer is "MongoDB"
         selected: null
-      }
+      },
+      {
+        question: "What is the main function of Node.js in full stack development?",
+        options: [
+          "To create user interfaces for the web page",
+          "To handle server-side operations and manage requests",
+          "To provide data storage solutions",
+          "To design the layout of the web page",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is a key advantage of using MongoDB in full stack development?",
+        options: [
+          "It is a relational database system",
+          "It stores data in JSON-like format, which is easy to work with in JavaScript",
+          "It requires no server-side coding",
+          "It is primarily used for front-end development",
+        ],
+        answer: 1,
+      },
+      {
+        question: "In the context of web applications, what does 'CRUD' stand for?",
+        options: [
+          "Create, Read, Update, Delete",
+          "Create, Render, Update, Design",
+          "Cache, Render, Update, Deploy",
+          "Classify, Render, Update, Delete",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which HTTP method is used to retrieve data from a server in a full stack web application?",
+        options: [
+          "POST",
+          "PUT",
+          "GET",
+          "DELETE",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is the purpose of using Express.js in a full stack application?",
+        options: [
+          "To style the user interface",
+          "To manage routes, requests, and server-side logic",
+          "To store data in MongoDB",
+          "To authenticate users",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following technologies is used to build the back-end of a web application?",
+        options: [
+          "Vue.js",
+          "Node.js",
+          "HTML",
+          "CSS",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is a RESTful API, and why is it important in full stack development?",
+        options: [
+          "A method for rendering pages on the server side",
+          "An architectural style for creating APIs that allow front-end and back-end communication",
+          "A design pattern used for building user interfaces",
+          "A security protocol for managing data privacy",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is used to manage data flow between the front-end and back-end in a full stack application?",
+        options: [
+          "Bootstrap",
+          "REST API",
+          "MongoDB",
+          "React.js",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following best describes the role of a back-end developer in full stack development?",
+        options: [
+          "Designing the layout and style of the web pages",
+          "Writing code for client-side interactivity",
+          "Managing the server, database, and API logic",
+          "Ensuring the website is responsive across different devices",
+        ],
+        answer: 2,
+      },
+      {
+        question: "Which of the following frameworks is commonly used for building the front-end of a web application in full stack development?",
+        options: [
+          "Angular",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+        ],
+        answer: 0,
+      },
     ]
   },
   9: {
@@ -482,7 +1332,107 @@ export const quizData = {
         ],
         answer: 2,  // Correct answer is "A* Search"
         selected: null
-      }
+      },
+      {
+        question: "What is Artificial Intelligence (AI)?",
+        options: [
+          "The ability of machines to perform tasks that require human intelligence",
+          "The study of building robots",
+          "A type of programming language used in robotics",
+          "The ability to create complex 3D models",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is an example of machine learning?",
+        options: [
+          "A computer running a set of pre-written instructions",
+          "A robot recognizing objects based on past experiences",
+          "A search engine displaying the most relevant results based on keywords",
+          "A video game character following a fixed set of movements",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following tasks can be classified under the field of AI?",
+        options: [
+          "Image recognition",
+          "Sorting data in a spreadsheet",
+          "Programming web applications",
+          "Designing websites",
+        ],
+        answer: 0,
+      },
+      {
+        question: "What is supervised learning in machine learning?",
+        options: [
+          "Learning from unlabeled data",
+          "Learning from labeled data where the output is known",
+          "Learning by trial and error",
+          "Learning without feedback or guidance",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is an example of unsupervised learning?",
+        options: [
+          "Classifying emails as spam or not spam",
+          "Predicting the price of houses based on data",
+          "Clustering customers based on purchase behavior",
+          "Training a neural network to recognize images",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is a neural network in AI?",
+        options: [
+          "A type of programming language for building AI systems",
+          "A system that mimics the human brain to solve complex problems",
+          "A database used to store AI models",
+          "A hardware component used in AI systems",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What does the term 'data preprocessing' refer to in AI?",
+        options: [
+          "The process of collecting data from the internet",
+          "The cleaning and transformation of raw data into a usable format",
+          "The process of training a model with data",
+          "The process of designing an AI algorithm",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is a major challenge in AI?",
+        options: [
+          "Lack of available data",
+          "Inability to write code",
+          "Lack of human resources",
+          "Ethical concerns and bias in algorithms",
+        ],
+        answer: 3,
+      },
+      {
+        question: "What is reinforcement learning in AI?",
+        options: [
+          "Learning from past experiences and labeled data",
+          "Learning through trial and error with rewards and punishments",
+          "Learning without supervision from an instructor",
+          "Learning by observing other systems perform tasks",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the Turing Test used for in the field of AI?",
+        options: [
+          "To measure the speed of an AI system",
+          "To determine if a machine can exhibit intelligent behavior indistinguishable from a human",
+          "To evaluate the accuracy of a machine learning model",
+          "To test the efficiency of an algorithm",
+        ],
+        answer: 1,
+      },
     ]
   },
   10: {
@@ -530,7 +1480,107 @@ export const quizData = {
         ],
         answer: 1,  // Correct answer is "It helps to optimize the weights through gradient descent"
         selected: null
-      }
+      },
+      {
+        question: "Which of the following is an example of a search algorithm in AI?",
+        options: [
+          "A* search",
+          "Neural networks",
+          "K-means clustering",
+          "Decision trees",
+        ],
+        answer: 0,
+      },
+      {
+        question: "What does the heuristic function do in a search algorithm?",
+        options: [
+          "It calculates the shortest path between two nodes",
+          "It measures the quality of the solution",
+          "It helps the algorithm decide which path to explore next",
+          "It updates the AI model during learning",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is a minimax algorithm used for?",
+        options: [
+          "Optimizing a search tree in game playing",
+          "Training machine learning models",
+          "Determining the optimal path in a graph",
+          "Selecting the best features for a model",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is an example of an adversarial search problem?",
+        options: [
+          "Finding the shortest path between two points on a map",
+          "Determining the best move in a chess game",
+          "Clustering similar data points together",
+          "Recognizing faces in images",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the purpose of reinforcement learning?",
+        options: [
+          "To learn patterns in data without supervision",
+          "To classify data into predefined categories",
+          "To maximize long-term rewards through trial and error",
+          "To generate realistic images based on input data",
+        ],
+        answer: 2,
+      },
+      {
+        question: "Which of the following is a key concept in the Q-learning algorithm?",
+        options: [
+          "Minimizing the error between predicted and actual outcomes",
+          "Maximizing the cumulative reward over time",
+          "Learning through labeled data",
+          "Training a neural network to recognize patterns",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is a decision tree used for in AI?",
+        options: [
+          "Representing a sequence of actions in reinforcement learning",
+          "Classifying data by making a series of binary decisions",
+          "Creating clusters of similar data points",
+          "Storing knowledge in a hierarchical structure",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is a common application of AI in natural language processing?",
+        options: [
+          "Speech recognition",
+          "Object detection in images",
+          "Generating realistic images from text descriptions",
+          "Predicting stock market trends",
+        ],
+        answer: 0,
+      },
+      {
+        question: "What is the purpose of backpropagation in neural networks?",
+        options: [
+          "To improve the accuracy of the model by adjusting weights based on error",
+          "To simulate the human brain's neural connections",
+          "To search for patterns in unstructured data",
+          "To evaluate the performance of a machine learning algorithm",
+        ],
+        answer: 0,
+      },
+      {
+        question: "What is a significant challenge in training deep learning models?",
+        options: [
+          "The inability to use large datasets",
+          "The difficulty in tuning hyperparameters",
+          "The lack of appropriate programming languages",
+          "The need for extensive human input for feature extraction",
+        ],
+        answer: 1,
+      },
     ]
   },
   11: {
@@ -622,7 +1672,107 @@ export const quizData = {
         ],
         answer: 0,  // Correct answer is "How the design of objects can suggest their functionality"
         selected: null
-      }
+      },
+      {
+        question: "Which of the following is the primary goal of Human-Computer Interaction (HCI)?",
+        options: [
+          "To create efficient software algorithms",
+          "To improve the usability and experience of human-computer interaction",
+          "To reduce the hardware requirements of systems",
+          "To increase the processing power of computers",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is meant by 'usability' in the context of HCI?",
+        options: [
+          "The technical performance of a computer system",
+          "How easy and intuitive it is for users to interact with a system",
+          "The speed at which a computer can process data",
+          "The ability of a system to handle complex tasks",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is a common method for evaluating usability in HCI?",
+        options: [
+          "Code reviews",
+          "User testing and feedback",
+          "Memory usage analysis",
+          "Performance benchmarks",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is NOT a principle of good interface design?",
+        options: [
+          "Consistency",
+          "Simplicity",
+          "Clarity",
+          "Complexity",
+        ],
+        answer: 3,
+      },
+      {
+        question: "What does the term 'affordance' refer to in HCI?",
+        options: [
+          "The visual appeal of a system's design",
+          "The characteristics of an interface that suggest its use",
+          "The number of features a system can handle",
+          "The complexity of tasks that can be performed using the system",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is a benefit of a good user interface?",
+        options: [
+          "Increased learning curve",
+          "Reduced accessibility",
+          "Improved user satisfaction and productivity",
+          "Increased complexity of the system",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is the 'interaction design' process focused on?",
+        options: [
+          "Building software architecture",
+          "Creating efficient algorithms",
+          "Designing the flow of user interactions with the system",
+          "Developing hardware systems",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is 'feedback' in the context of HCI?",
+        options: [
+          "The response given by a system after a user action",
+          "The amount of data that can be processed by the system",
+          "The error rate in a system's response",
+          "The response time of the system's hardware",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is a key factor in designing for accessibility in HCI?",
+        options: [
+          "Prioritizing aesthetics over functionality",
+          "Ensuring the system is usable by people with various disabilities",
+          "Using the most advanced technology available",
+          "Limiting system functionality to power users",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which concept in HCI refers to making a system's interface intuitive and easy to use for a wide range of users?",
+        options: [
+          "User-centered design",
+          "Responsive design",
+          "Information overload",
+          "Skeuomorphism",
+        ],
+        answer: 0,
+      },
     ]
   },
   
@@ -715,7 +1865,107 @@ export const quizData = {
         ],
         answer: 0,  // Correct answer is "Cognitive Load Theory"
         selected: null
-      }
+      },
+      {
+        question: "What does the term 'user-centered design' refer to in HCI?",
+        options: [
+          "Designing with a focus on the system’s functionality",
+          "Designing based on user needs, preferences, and behaviors",
+          "Focusing on aesthetics and visual appeal",
+          "Creating designs that are only accessible to advanced users",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is an example of a direct manipulation interface?",
+        options: [
+          "A command-line interface",
+          "A touchscreen interface with gestures",
+          "A voice-based assistant",
+          "A text editor with keyboard shortcuts",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is the main purpose of prototyping in HCI?",
+        options: [
+          "To create a final version of the system",
+          "To test ideas and gather feedback on the design",
+          "To implement system architecture",
+          "To optimize performance and speed",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following best describes a 'cognitive walkthrough' in usability testing?",
+        options: [
+          "A test to assess how the system handles large data",
+          "A test in which users perform tasks while the system records their actions",
+          "A structured process where evaluators walk through the interface and predict user behaviors",
+          "A simulation of the system’s performance under heavy load",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What is the concept of 'affordance' in relation to interactive design?",
+        options: [
+          "The ease with which users can perform tasks on the system",
+          "The physical or visual cues that suggest how an object should be used",
+          "The responsiveness of a system to user input",
+          "The amount of data a system can process at a time",
+        ],
+        answer: 1,
+      },
+      {
+        question: "In the context of HCI, what is 'feedback' and why is it important?",
+        options: [
+          "The visual design of the system, important for aesthetics",
+          "The system’s response to user actions, important for guiding users and confirming actions",
+          "The system’s memory usage, important for performance",
+          "The time it takes for the system to process a request",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is a common principle in designing interfaces for mobile applications?",
+        options: [
+          "Minimizing touch interaction to improve accuracy",
+          "Providing as much information as possible on each screen",
+          "Using simple, easy-to-read text and large buttons",
+          "Limiting the use of icons and buttons",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What does 'contextual inquiry' involve in the design process?",
+        options: [
+          "Asking users to evaluate prototypes remotely",
+          "Observing users in their natural environment to understand how they interact with systems",
+          "Creating use cases for the system based on user stories",
+          "Designing systems that can be used in any context",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What is a key characteristic of a 'responsive design' in HCI?",
+        options: [
+          "The design adapts to different screen sizes and devices",
+          "The system prioritizes performance over user experience",
+          "The design is fixed and doesn’t change with user input",
+          "The interface is only functional on desktop computers",
+        ],
+        answer: 0,
+      },
+      {
+        question: "Which of the following is an example of a user interface element that provides clear feedback to the user?",
+        options: [
+          "A text field that highlights in red when incorrect input is provided",
+          "A menu bar with a variety of options",
+          "A complex series of options that require multiple steps to select",
+          "A list of instructions with no visual cues",
+        ],
+        answer: 0,
+      },
     ]
   }
   

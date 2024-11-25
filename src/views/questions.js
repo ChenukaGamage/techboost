@@ -79,51 +79,61 @@ export const quizData = {
         question: "What is the correct way to declare a variable in Python?",
         options: ["let x = 5;", "var x = 5;", "x = 5", "int x = 5;"],
         answer: 2,
+        selected: null
       },
       {
         question: "Which function is used to get user input in Python?",
         options: ["scanf()", "cin", "input()", "read()"],
         answer: 2,
+        selected: null
       },
       {
         question: "How do you write a single-line comment in Python?",
         options: ["// comment", "# comment", "/* comment */", "<!-- comment -->"],
         answer: 1,
+        selected: null
       },
       {
         question: "What is the output of: print('Hello' + 'World')?",
         options: ["Hello World", "Hello+World", "HelloWorld", "Error"],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What keyword is used to define a function in Python?",
         options: ["function", "def", "define", "func"],
         answer: 1,
+        selected: null
       },
       {
         question: "What data type does the function len() return?",
         options: ["float", "int", "str", "list"],
         answer: 1,
+        selected: null
       },
       {
         question: "Which of the following is not a Python data type?",
         options: ["list", "tuple", "map", "dictionary"],
         answer: 2,
+        selected: null
       },
       {
         question: "What is the output of: print(3 * 'abc')?",
         options: ["abcabcabc", "abc*3", "abc", "Error"],
         answer: 0,
+        selected: null
       },
       {
         question: "How do you create a new line in a string?",
         options: ["\\n", "\\t", "\\r", "\\s"],
         answer: 0,
+        selected: null
       },
       {
         question: "What is the data type of: type(4.0)?",
         options: ["int", "float", "complex", "double"],
         answer: 1,
+        selected: null
       },
      ]
    },
@@ -221,6 +231,7 @@ export const quizData = {
         "Creates a variable",
       ],
       answer: 0,
+      selected: null
     },
     {
       question: "Which of the following is the correct syntax for an 'if' statement in Python?",
@@ -231,6 +242,7 @@ export const quizData = {
         "if condition { ... } else { ... }",
       ],
       answer: 2,
+      selected: null
     },
     {
       question: "What is the output of the following code? print(3 == 3)",
@@ -241,6 +253,7 @@ export const quizData = {
         "3",
       ],
       answer: 0,
+      selected: null
     },
     {
       question: "What does the 'not' operator do in Python?",
@@ -251,6 +264,7 @@ export const quizData = {
         "None of the above",
       ],
       answer: 1,
+      selected: null
     },
     {
       question: "How do you combine multiple conditions in an 'if' statement in Python?",
@@ -261,6 +275,7 @@ export const quizData = {
         "Multiple 'if' statements in sequence",
       ],
       answer: 1,
+      selected: null
     },
     {
       question: "Which of the following will be evaluated as False in Python?",
@@ -271,6 +286,7 @@ export const quizData = {
         "if 1:",
       ],
       answer: 3,
+      selected: null
     },
     {
       question: "Which Python keyword is used to stop the execution of a loop?",
@@ -281,6 +297,7 @@ export const quizData = {
         "halt",
       ],
       answer: 1,
+      selected: null
     },
     {
       question: "What is the result of the following Python expression: 5 > 2 and 3 < 7?",
@@ -291,6 +308,7 @@ export const quizData = {
         "None",
       ],
       answer: 0,
+      selected: null
     },
     {
       question: "What is the output of the following code? print(1 < 2 < 3)",
@@ -301,6 +319,7 @@ export const quizData = {
         "None",
       ],
       answer: 0,
+      selected: null
     },
     {
       question: "What is the correct way to write a conditional expression (ternary operator) in Python?",
@@ -311,6 +330,7 @@ export const quizData = {
         "None of the above",
       ],
       answer: 1,
+      selected: null
     },
      ]
    },
@@ -369,6 +389,7 @@ export const quizData = {
           "0 int x;",
         ],
         answer: 2,
+        selected: null
       },
       {
         question: "What is the default value of a boolean variable in Java?",
@@ -379,6 +400,7 @@ export const quizData = {
           "0",
         ],
         answer: 0,
+        selected: null
       },
       {
         question: "Which method is the entry point for any Java application?",
@@ -389,6 +411,7 @@ export const quizData = {
           "init()",
         ],
         answer: 1,
+        selected: null
       },
       {
         question: "Which of the following data types is not a primitive type in Java?",
@@ -399,6 +422,7 @@ export const quizData = {
           "double",
         ],
         answer: 2,
+        selected: null
       },
       {
         question: "Which keyword is used to define a constant in Java?",
@@ -409,6 +433,7 @@ export const quizData = {
           "immutable",
         ],
         answer: 0,
+        selected: null
       },
       {
         question: "What will the following code output? `System.out.println(5 + 3 * 2);`",
@@ -419,6 +444,7 @@ export const quizData = {
           "23",
         ],
         answer: 1,
+        selected: null
       },
       {
         question: "Which of the following is a valid Java identifier?",
@@ -429,6 +455,7 @@ export const quizData = {
           "variable@1",
         ],
         answer: 1,
+        selected: null
       },
       {
         question: "Which of the following is the correct syntax to create a new object of a class in Java?",
@@ -439,6 +466,7 @@ export const quizData = {
           "ClassName object = new object();",
         ],
         answer: 0,
+        selected: null
       },
       {
         question: "What is the purpose of the `public static void main(String[] args)` method in Java?",
@@ -449,6 +477,7 @@ export const quizData = {
           "It compiles the Java code",
         ],
         answer: 0,
+        selected: null
       },
       {
         question: "Which of the following is the correct syntax for a single-line comment in Java?",
@@ -459,6 +488,7 @@ export const quizData = {
           "<-- comment -->",
         ],
         answer: 1,
+        selected: null
       },
     ]
   },
@@ -517,6 +547,7 @@ export const quizData = {
           "for-each loop",
         ],
         answer: 2,
+        selected: null
       },
       {
         question: "What will the following code print? `for(int i = 0; i < 5; i++) { System.out.print(i + \" \"); }`",
@@ -527,6 +558,7 @@ export const quizData = {
           "5 4 3 2 1",
         ],
         answer: 0,
+        selected: null
       },
       {
         question: "Which of the following methods can be used to find the length of an array in Java?",
@@ -537,6 +569,7 @@ export const quizData = {
           "array.getLength()",
         ],
         answer: 2,
+        selected: null
       },
       {
         question: "What is the result of the following expression? `int[] arr = {1, 2, 3}; arr[2] = 4;`",
@@ -547,6 +580,7 @@ export const quizData = {
           "4, 2, 3",
         ],
         answer: 1,
+        selected: null
       },
       {
         question: "What is the correct syntax to declare an array of 10 integers in Java?",
@@ -557,6 +591,7 @@ export const quizData = {
           "int arr[10];",
         ],
         answer: 0,
+        selected: null
       },
       {
         question: "Which of the following is used to handle exceptions in Java?",
@@ -567,6 +602,7 @@ export const quizData = {
           "catch-throw block",
         ],
         answer: 0,
+        selected: null
       },
       {
         question: "What will the following code print? `try { int x = 10 / 0; } catch (ArithmeticException e) { System.out.println(\"Error\"); }`",
@@ -577,6 +613,7 @@ export const quizData = {
           "Nothing",
         ],
         answer: 0,
+        selected: null
       },
       {
         question: "Which of the following is NOT a valid type of exception in Java?",
@@ -587,6 +624,7 @@ export const quizData = {
           "ArithmeticException",
         ],
         answer: 2,
+        selected: null
       },
       {
         question: "What is the output of the following code? `int[] arr = {1, 2, 3, 4}; System.out.println(arr[5]);`",
@@ -597,6 +635,7 @@ export const quizData = {
           "null",
         ],
         answer: 1,
+        selected: null
       },
       {
         question: "Which of the following statements is correct for catching multiple exceptions in Java?",
@@ -607,6 +646,7 @@ export const quizData = {
           "catch(Exception1, Exception2, Exception3)",
         ],
         answer: 0,
+        selected: null
       },
     ]
   },
@@ -664,7 +704,8 @@ export const quizData = {
           "Control the input and output devices",
           "Control the power supply",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is the purpose of the ALU in the CPU?",
@@ -684,7 +725,8 @@ export const quizData = {
           "Stores data in memory",
           "Controls the input and output devices",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which component is responsible for transferring data between the CPU and memory?",
@@ -694,7 +736,8 @@ export const quizData = {
           "Memory Unit",
           "Data Bus",
         ],
-        answer: 3,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is the difference between RAM and ROM?",
@@ -704,7 +747,8 @@ export const quizData = {
           "RAM is used for long-term storage, while ROM is used for temporary storage",
           "ROM is faster than RAM",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is the purpose of the clock in a CPU?",
@@ -714,7 +758,8 @@ export const quizData = {
           "It stores data temporarily",
           "It generates power for the CPU",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is an example of secondary memory?",
@@ -724,7 +769,8 @@ export const quizData = {
           "Hard Disk Drive (HDD)",
           "Registers",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What does the term 'clock cycle' refer to in a CPU?",
@@ -734,7 +780,8 @@ export const quizData = {
           "The time between two instructions being fetched",
           "The speed at which data is transferred",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "Which of the following is not a type of processor architecture?",
@@ -744,7 +791,8 @@ export const quizData = {
           "RISC",
           "SRAM",
         ],
-        answer: 3,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is pipelining in CPU architecture?",
@@ -754,7 +802,8 @@ export const quizData = {
           "Performing a single instruction in multiple stages",
           "None of the above",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is the primary function of the ALU (Arithmetic Logic Unit) in a computer system?",
@@ -764,7 +813,8 @@ export const quizData = {
           "Handling input and output",
           "Controlling data flow",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is NOT part of the central processing unit (CPU)?",
@@ -774,7 +824,8 @@ export const quizData = {
           "Cache memory",
           "Hard drive",
         ],
-        answer: 3,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What does the control unit (CU) do in a CPU?",
@@ -784,7 +835,8 @@ export const quizData = {
           "It fetches, decodes, and executes instructions",
           "It provides power to the CPU",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "In a Von Neumann architecture, which of the following components stores both data and instructions?",
@@ -794,7 +846,8 @@ export const quizData = {
           "Memory",
           "CPU",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is the function of the bus in a computer system?",
@@ -804,7 +857,8 @@ export const quizData = {
           "It processes data",
           "It manages input and output operations",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following best describes a register in the context of computer architecture?",
@@ -814,7 +868,8 @@ export const quizData = {
           "A type of RAM",
           "A secondary storage device",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is the purpose of the fetch-decode-execute cycle in a CPU?",
@@ -824,7 +879,8 @@ export const quizData = {
           "To execute instructions in a program step by step",
           "To store data in memory",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What type of memory is directly accessible by the CPU and stores instructions and data?",
@@ -834,7 +890,8 @@ export const quizData = {
           "Secondary storage (Hard drive)",
           "Optical storage (CD)",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following best describes the term 'clock cycle' in computer architecture?",
@@ -844,7 +901,8 @@ export const quizData = {
           "The speed at which the memory operates",
           "The frequency at which the CPU fetches instructions from memory",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is NOT a type of processor register?",
@@ -854,7 +912,8 @@ export const quizData = {
           "Cache",
           "Instruction Register",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
     ]
   },
@@ -879,7 +938,7 @@ export const quizData = {
           "One 1 in the second column",
           "One 1 in the top-left corner"
         ],
-        answer: 0,  // Correct answer is "Two adjacent 1's"
+        answer: 0, // Correct answer is "Two adjacent 1's"
         selected: null
       },
       {
@@ -912,7 +971,8 @@ export const quizData = {
           "To store data that is no longer in use",
           "To handle input and output operations",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following best describes the difference between RAM (Random Access Memory) and ROM (Read-Only Memory)?",
@@ -922,7 +982,8 @@ export const quizData = {
           "RAM is volatile, and data is lost when power is turned off, while ROM is non-volatile",
           "Both RAM and ROM are volatile",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is the purpose of virtual memory in computer systems?",
@@ -932,7 +993,8 @@ export const quizData = {
           "To manage the execution of instructions",
           "To prevent memory leaks from occurring",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "In a computer system, what is the main function of the system bus?",
@@ -942,7 +1004,8 @@ export const quizData = {
           "It transfers data between the CPU, memory, and other components",
           "It stores data and instructions temporarily",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "Which of the following is a characteristic of a CISC (Complex Instruction Set Computer) architecture?",
@@ -952,7 +1015,8 @@ export const quizData = {
           "It relies heavily on pipelining",
           "It has a reduced set of instructions for faster execution",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What does the term 'pipelining' refer to in CPU architecture?",
@@ -962,7 +1026,8 @@ export const quizData = {
           "It handles data transfer between registers",
           "It limits the number of instructions the CPU can process at once",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "Which of the following best defines 'data hazards' in a pipelined architecture?",
@@ -972,7 +1037,8 @@ export const quizData = {
           "A situation where data is fetched from the wrong memory address",
           "A situation where multiple instructions execute at the same time",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What does the term 'superscalar architecture' refer to in CPU design?",
@@ -982,7 +1048,8 @@ export const quizData = {
           "A CPU design that uses simpler, scalar instructions",
           "A type of memory architecture",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "Which of the following best describes a 'Harvard Architecture'?",
@@ -992,7 +1059,8 @@ export const quizData = {
           "A computer architecture that doesn't use a CPU",
           "A computer architecture that uses a single processor for all tasks",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is a primary benefit of using cache memory in a system?",
@@ -1002,7 +1070,8 @@ export const quizData = {
           "It can run applications faster than the primary memory",
           "It acts as a backup in case the main memory fails",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
     ]
   },
@@ -1055,7 +1124,8 @@ export const quizData = {
           "To implement security protocols and authentication",
           "To maintain the backend infrastructure",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is a commonly used front-end framework for building interactive user interfaces?",
@@ -1065,7 +1135,8 @@ export const quizData = {
           "Express",
           "MongoDB",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is an essential component of a full stack development environment?",
@@ -1075,7 +1146,8 @@ export const quizData = {
           "CSS for database management",
           "SQL for building user interfaces",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "In the context of full stack development, what does the term 'stack' refer to?",
@@ -1085,7 +1157,8 @@ export const quizData = {
           "The database management system",
           "The cloud platform used for deployment",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is the main purpose of using a back-end framework like Express.js in full stack development?",
@@ -1095,7 +1168,8 @@ export const quizData = {
           "To style the application",
           "To handle asynchronous operations on the client-side",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following programming languages is primarily used for back-end development in full stack applications?",
@@ -1105,7 +1179,8 @@ export const quizData = {
           "CSS",
           "PHP",
         ],
-        answer: 3,
+        answer: 2, 
+        selected: null
       },
       {
         question: "Which of the following is the function of CSS in full stack development?",
@@ -1115,7 +1190,8 @@ export const quizData = {
           "To manage server requests and responses",
           "To store and retrieve data from the database",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What does 'responsive design' mean in the context of front-end web development?",
@@ -1125,7 +1201,8 @@ export const quizData = {
           "The design makes the application load faster",
           "The design ensures data is fetched quickly from the server",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "Which of the following is a common database used in full stack development?",
@@ -1135,7 +1212,8 @@ export const quizData = {
           "Bootstrap",
           "Sass",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "In a full stack application, what is the primary function of an API?",
@@ -1145,7 +1223,8 @@ export const quizData = {
           "To design the user interface",
           "To ensure secure authentication for users",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
     ]
   },
@@ -1193,7 +1272,8 @@ export const quizData = {
           "To provide data storage solutions",
           "To design the layout of the web page",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is a key advantage of using MongoDB in full stack development?",
@@ -1203,7 +1283,8 @@ export const quizData = {
           "It requires no server-side coding",
           "It is primarily used for front-end development",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "In the context of web applications, what does 'CRUD' stand for?",
@@ -1213,7 +1294,8 @@ export const quizData = {
           "Cache, Render, Update, Deploy",
           "Classify, Render, Update, Delete",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "Which HTTP method is used to retrieve data from a server in a full stack web application?",
@@ -1223,7 +1305,8 @@ export const quizData = {
           "GET",
           "DELETE",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is the purpose of using Express.js in a full stack application?",
@@ -1233,7 +1316,8 @@ export const quizData = {
           "To store data in MongoDB",
           "To authenticate users",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following technologies is used to build the back-end of a web application?",
@@ -1243,7 +1327,8 @@ export const quizData = {
           "HTML",
           "CSS",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is a RESTful API, and why is it important in full stack development?",
@@ -1253,7 +1338,8 @@ export const quizData = {
           "A design pattern used for building user interfaces",
           "A security protocol for managing data privacy",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is used to manage data flow between the front-end and back-end in a full stack application?",
@@ -1263,7 +1349,8 @@ export const quizData = {
           "MongoDB",
           "React.js",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following best describes the role of a back-end developer in full stack development?",
@@ -1273,7 +1360,8 @@ export const quizData = {
           "Managing the server, database, and API logic",
           "Ensuring the website is responsive across different devices",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "Which of the following frameworks is commonly used for building the front-end of a web application in full stack development?",
@@ -1283,7 +1371,8 @@ export const quizData = {
           "Express.js",
           "MongoDB",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
     ]
   },
@@ -1341,7 +1430,8 @@ export const quizData = {
           "A type of programming language used in robotics",
           "The ability to create complex 3D models",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "Which of the following is an example of machine learning?",
@@ -1351,7 +1441,8 @@ export const quizData = {
           "A search engine displaying the most relevant results based on keywords",
           "A video game character following a fixed set of movements",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following tasks can be classified under the field of AI?",
@@ -1361,7 +1452,8 @@ export const quizData = {
           "Programming web applications",
           "Designing websites",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "What is supervised learning in machine learning?",
@@ -1371,7 +1463,8 @@ export const quizData = {
           "Learning by trial and error",
           "Learning without feedback or guidance",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is an example of unsupervised learning?",
@@ -1381,7 +1474,8 @@ export const quizData = {
           "Clustering customers based on purchase behavior",
           "Training a neural network to recognize images",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is a neural network in AI?",
@@ -1391,7 +1485,8 @@ export const quizData = {
           "A database used to store AI models",
           "A hardware component used in AI systems",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What does the term 'data preprocessing' refer to in AI?",
@@ -1401,7 +1496,8 @@ export const quizData = {
           "The process of training a model with data",
           "The process of designing an AI algorithm",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is a major challenge in AI?",
@@ -1411,7 +1507,8 @@ export const quizData = {
           "Lack of human resources",
           "Ethical concerns and bias in algorithms",
         ],
-        answer: 3,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is reinforcement learning in AI?",
@@ -1421,7 +1518,8 @@ export const quizData = {
           "Learning without supervision from an instructor",
           "Learning by observing other systems perform tasks",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is the Turing Test used for in the field of AI?",
@@ -1431,7 +1529,8 @@ export const quizData = {
           "To evaluate the accuracy of a machine learning model",
           "To test the efficiency of an algorithm",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
     ]
   },
@@ -1489,7 +1588,8 @@ export const quizData = {
           "K-means clustering",
           "Decision trees",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "What does the heuristic function do in a search algorithm?",
@@ -1499,7 +1599,8 @@ export const quizData = {
           "It helps the algorithm decide which path to explore next",
           "It updates the AI model during learning",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is a minimax algorithm used for?",
@@ -1509,7 +1610,8 @@ export const quizData = {
           "Determining the optimal path in a graph",
           "Selecting the best features for a model",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "Which of the following is an example of an adversarial search problem?",
@@ -1519,7 +1621,8 @@ export const quizData = {
           "Clustering similar data points together",
           "Recognizing faces in images",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is the purpose of reinforcement learning?",
@@ -1529,7 +1632,8 @@ export const quizData = {
           "To maximize long-term rewards through trial and error",
           "To generate realistic images based on input data",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "Which of the following is a key concept in the Q-learning algorithm?",
@@ -1539,7 +1643,8 @@ export const quizData = {
           "Learning through labeled data",
           "Training a neural network to recognize patterns",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is a decision tree used for in AI?",
@@ -1549,7 +1654,8 @@ export const quizData = {
           "Creating clusters of similar data points",
           "Storing knowledge in a hierarchical structure",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is a common application of AI in natural language processing?",
@@ -1559,7 +1665,8 @@ export const quizData = {
           "Generating realistic images from text descriptions",
           "Predicting stock market trends",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "What is the purpose of backpropagation in neural networks?",
@@ -1569,7 +1676,8 @@ export const quizData = {
           "To search for patterns in unstructured data",
           "To evaluate the performance of a machine learning algorithm",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "What is a significant challenge in training deep learning models?",
@@ -1579,7 +1687,8 @@ export const quizData = {
           "The lack of appropriate programming languages",
           "The need for extensive human input for feature extraction",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
     ]
   },
@@ -1681,7 +1790,8 @@ export const quizData = {
           "To reduce the hardware requirements of systems",
           "To increase the processing power of computers",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is meant by 'usability' in the context of HCI?",
@@ -1691,7 +1801,8 @@ export const quizData = {
           "The speed at which a computer can process data",
           "The ability of a system to handle complex tasks",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is a common method for evaluating usability in HCI?",
@@ -1701,7 +1812,8 @@ export const quizData = {
           "Memory usage analysis",
           "Performance benchmarks",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is NOT a principle of good interface design?",
@@ -1711,7 +1823,8 @@ export const quizData = {
           "Clarity",
           "Complexity",
         ],
-        answer: 3,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What does the term 'affordance' refer to in HCI?",
@@ -1721,7 +1834,8 @@ export const quizData = {
           "The number of features a system can handle",
           "The complexity of tasks that can be performed using the system",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is a benefit of a good user interface?",
@@ -1731,7 +1845,8 @@ export const quizData = {
           "Improved user satisfaction and productivity",
           "Increased complexity of the system",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is the 'interaction design' process focused on?",
@@ -1741,7 +1856,8 @@ export const quizData = {
           "Designing the flow of user interactions with the system",
           "Developing hardware systems",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is 'feedback' in the context of HCI?",
@@ -1751,7 +1867,8 @@ export const quizData = {
           "The error rate in a system's response",
           "The response time of the system's hardware",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "Which of the following is a key factor in designing for accessibility in HCI?",
@@ -1761,7 +1878,8 @@ export const quizData = {
           "Using the most advanced technology available",
           "Limiting system functionality to power users",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which concept in HCI refers to making a system's interface intuitive and easy to use for a wide range of users?",
@@ -1771,7 +1889,8 @@ export const quizData = {
           "Information overload",
           "Skeuomorphism",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
     ]
   },
@@ -1874,7 +1993,8 @@ export const quizData = {
           "Focusing on aesthetics and visual appeal",
           "Creating designs that are only accessible to advanced users",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is an example of a direct manipulation interface?",
@@ -1884,7 +2004,8 @@ export const quizData = {
           "A voice-based assistant",
           "A text editor with keyboard shortcuts",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is the main purpose of prototyping in HCI?",
@@ -1894,7 +2015,8 @@ export const quizData = {
           "To implement system architecture",
           "To optimize performance and speed",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following best describes a 'cognitive walkthrough' in usability testing?",
@@ -1904,7 +2026,8 @@ export const quizData = {
           "A structured process where evaluators walk through the interface and predict user behaviors",
           "A simulation of the system’s performance under heavy load",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What is the concept of 'affordance' in relation to interactive design?",
@@ -1914,7 +2037,8 @@ export const quizData = {
           "The responsiveness of a system to user input",
           "The amount of data a system can process at a time",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "In the context of HCI, what is 'feedback' and why is it important?",
@@ -1924,7 +2048,8 @@ export const quizData = {
           "The system’s memory usage, important for performance",
           "The time it takes for the system to process a request",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "Which of the following is a common principle in designing interfaces for mobile applications?",
@@ -1934,7 +2059,8 @@ export const quizData = {
           "Using simple, easy-to-read text and large buttons",
           "Limiting the use of icons and buttons",
         ],
-        answer: 2,
+        answer: 2, 
+        selected: null
       },
       {
         question: "What does 'contextual inquiry' involve in the design process?",
@@ -1944,7 +2070,8 @@ export const quizData = {
           "Creating use cases for the system based on user stories",
           "Designing systems that can be used in any context",
         ],
-        answer: 1,
+        answer: 1, 
+        selected: null
       },
       {
         question: "What is a key characteristic of a 'responsive design' in HCI?",
@@ -1954,7 +2081,8 @@ export const quizData = {
           "The design is fixed and doesn’t change with user input",
           "The interface is only functional on desktop computers",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
       {
         question: "Which of the following is an example of a user interface element that provides clear feedback to the user?",
@@ -1964,7 +2092,8 @@ export const quizData = {
           "A complex series of options that require multiple steps to select",
           "A list of instructions with no visual cues",
         ],
-        answer: 0,
+        answer: 0, 
+        selected: null
       },
     ]
   }

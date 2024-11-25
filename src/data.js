@@ -10,7 +10,7 @@ export const classesData = [
     },
     {
       id: 2,
-      name: "COMP 1023 Programming 2 ",
+      name: "COMP 1123  Programming 2 ",
       chapters: [
         { name: "Chapter 1", quizId: 3 },
         { name: "Chapter 2", quizId: 4 }
@@ -18,7 +18,7 @@ export const classesData = [
     },
     {
       id: 3,
-      name: "Computer Architecture 1",
+      name: "COMP 2023 Computer Architecture 1",
       chapters: [
         { name: "Chapter 1", quizId: 5 },
         { name: "Chapter 2", quizId: 6 }
@@ -26,7 +26,7 @@ export const classesData = [
     },
     {
       id: 4,
-      name: "Full Stack Development",
+      name: "COMP 3033 Full Stack Development",
       chapters: [
         { name: "Chapter 1", quizId: 7 },
         { name: "Chapter 2", quizId: 8 }
@@ -34,7 +34,7 @@ export const classesData = [
     },
     {
       id: 5,
-      name: "Artificial Intelligence 1",
+      name: "COMP 3613 Artificial Intelligence 1",
       chapters: [
         { name: "Module 1", quizId: 9 },
         { name: "Module 2", quizId: 10 }
@@ -42,7 +42,7 @@ export const classesData = [
     },
     {
       id: 6,
-      name: "Human Computer Interaction",
+      name: "COMP 3583 Human Computer Interaction",
       chapters: [
         { name: "Chapter 1", quizId: 11 },
         { name: "Chapter 2", quizId: 12 }

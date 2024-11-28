@@ -41,49 +41,49 @@ export default {
 /* Styling for the card layout */
 .card {
   border-radius: 15px;
-  background-color: #34495e; /* Slightly lighter shade for the chapter cards */
+  background-color: #34495e; 
 }
 
 .card:hover {
-  transform: scale(1.02); /* Slight scaling effect on hover */
+  transform: scale(1.02); 
 }
 
 .card-title {
-  font-size: 1.5rem; /* Larger font size for chapter names */
-  text-align: center; /* Center align chapter names */
+  font-size: 1.5rem; 
+  text-align: center; 
   font-weight: bold;
-  text-transform: uppercase; /* Optional: For emphasis */
+  text-transform: uppercase; 
 }
 
 /* Styling for the container */
 .bg-dark {
-  border-radius: 20px; /* Rounded square container */
+  border-radius: 20px; 
 }
 
 /* Light border around the chapter grid */
 .border-light {
-  border: 2px solid #ffffff; /* Light border */
+  border: 2px solid #ffffff; 
 }
 
 .text-decoration-none {
-  text-decoration: none; /* Removes underline from router-link */
+  text-decoration: none; 
 }
 
 /* Styling for the page title */
 h2 {
   color: #ffffff;
-  font-size: 2.5rem; /* Adjust size for readability */
-  margin-bottom: 20px; /* Ensures clear space between title and grid */
+  font-size: 2.5rem;
+  margin-bottom: 20px; 
 }
 
 /* Making the chapter cards responsive */
 @media (max-width: 767px) {
   h2 {
-    font-size: 2rem; /* Adjust title size for smaller screens */
+    font-size: 2rem; 
   }
 
   .card {
-    height: auto; /* Allow cards to be flexible on small screens */
+    height: auto; 
   }
 }
 </style>

@@ -62,15 +62,14 @@
 
 <script>
 import { ref, computed, watch } from "vue";
-import { useRoute } from "vue-router"; // Import useRoute for accessing route parameters
-import { quizData } from "./questions.js"; // Import the quiz data module
+import { useRoute } from "vue-router";
+import { quizData } from "./questions.js";
 
 export default {
   setup() {
-    // this.$route.params.quizId
-    const route = useRoute(); // Get the route object
-    const quizId = computed(() => route.params.quizId); // Dynamically compute quizId from route params
-    const questions = ref([]); // Initialize an empty questions array
+    const route = useRoute(); 
+    const quizId = computed(() => route.params.quizId); 
+    const questions = ref([]); 
     const quizCompleted = ref(false);
     const currentQuestion = ref(0);
 
@@ -78,8 +77,8 @@ export default {
       quizId,
       (newQuizId) => {
         questions.value = quizData[newQuizId]?.questions || [];
-        quizCompleted.value = false; // Reset quiz completion status
-        currentQuestion.value = 0; // Reset to the first question
+        quizCompleted.value = false; 
+        currentQuestion.value = 0; 
       },
       { immediate: true }
     );

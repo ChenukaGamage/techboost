@@ -20,12 +20,12 @@ export default {
 
 <style>
 #app {
-  background-color: #2c3e50; /* Dark background for the app */
-  color: white; /* White text for better contrast */
-  min-height: 100vh; /* Ensure it covers the full viewport height */
+  background-color: #2c3e50; 
+  color: white; 
+  min-height: 100vh; 
 }
 
 .main-content {
-  padding: 20px; /* Add padding around the main content area */
+  padding: 20px; 
 }
 </style>

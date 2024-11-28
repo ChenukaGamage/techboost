@@ -34,6 +34,5 @@
   </script>
   
   <style scoped>
-  /* You can add styles specific to the navbar here */
   </style>
   

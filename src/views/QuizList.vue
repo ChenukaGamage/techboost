@@ -52,33 +52,33 @@
   /* Styling for the card layout */
   .card {
     border-radius: 15px;
-    background-color: #34495e; /* Slightly lighter shade for the course cards */
+    background-color: #34495e;
   }
   
   .card:hover {
-    transform: scale(1.02);  /*Slight scaling effect on hover */
+    transform: scale(1.02);  
   }
   
   .card-title {
-    font-size: 1.5rem; /* Larger font size for course names */
+    font-size: 1.5rem; 
     font-weight: bold;
-    text-transform: uppercase; /* Optional: For emphasis */
+    text-transform: uppercase;
     margin-bottom: 10px;
   }
   
   /* Styling for the container */
   .bg-dark {
-    border-radius: 20px; /* Rounded square container */
+    border-radius: 20px; 
   }
   
   /* Light border around the courses grid */
   .border-light {
-    border: 2px solid #ffffff; /* Light border */
+    border: 2px solid #ffffff;
   }
   
   /* Styling for buttons */
   .btn-outline-light {
-    width: 100%; /* Make buttons full-width */
+    width: 100%; 
     font-size: 1rem;
     font-weight: bold;
   }
@@ -91,18 +91,18 @@
   /* Styling for the page title */
   h2 {
     color: #ffffff;
-    font-size: 2.5rem; /* Adjust size for readability */
-    margin-bottom: 20px; /* Ensures clear space between title and grid */
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
   }
   
   /* Responsive design for smaller screens */
   @media (max-width: 767px) {
     h2 {
-      font-size: 2rem; /* Adjust title size for smaller screens */
+      font-size: 2rem;
     }
   
     .card {
-      height: auto; /* Allow cards to be flexible on small screens */
+      height: auto;
     }
   }
   </style>
